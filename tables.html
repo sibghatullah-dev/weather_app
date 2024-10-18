@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Data Table</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="main_grid">
+        <div class="menu">
+            <h1>Weather App</h1>
+            <a href="index.html" class="menu-buttons">Dashboard</a>
+            <a href="tables.html" class="menu-buttons">Tables</a>
+        </div>
+
+        <div class="data">
+            <h2>Weather Forecast for <span class="current_weathr_city_name"></span></h2>
+            <label for="filter-select">Choose a filter:</label>
+            <select id="filter-select">
+                <option value="">Select a filter</option>
+                <option value="asc">Sort Temperatures Ascending</option>
+                <option value="desc">Sort Temperatures Descending</option>
+                <option value="rain">Filter Rainy Days</option>
+                <option value="highest">Show Highest Temperature</option>
+            </select>
+            <button id="apply-filter">Apply Filter</button>
+            <button id="reset">Reset View</button>
+            <table class="weather_table">
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Temperature</th>
+                        <th>Weather Condition</th>
+                        <th>Weather Icon</th>
+                    </tr>
+                </thead>
+                <tbody id="weather_table_body">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="loading-spinner"></div>
+
+    <script src="table.js"></script>
+</body>
+</html>

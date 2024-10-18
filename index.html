@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <div class="main_grid">
+        <div class="menu">
+            <h1>Weather App</h1>
+            <a href="index.html" class="menu-buttons">Dashboard</a>
+            <a href="tables.html" class="menu-buttons">Tables</a>
+        </div>
+
+        <div class="data">
+            <div class="input_item">
+                <input type="text" class="input_city_name" placeholder="Enter city name">
+                <button class="get_weather_btn">Get Weather</button>
+                <button class="use_location_btn">Use My Location</button>
+                <label class="unit-toggle">
+                    <input type="checkbox" id="unit-toggle-checkbox">
+                    <span class="slider round"></span>
+                    <span class="toggle-label">°C</span>
+                </label>
+            </div>
+
+            <div class="current_weather_item">
+                <div class="current_weather">
+                    <div class="weather-info">
+                        <label>City</label>
+                        <span class="current_weather_city_name"></span>
+                    </div>
+                    <div class="weather-info">
+                        <label>Temperature</label>
+                        <span class="current_weather_temperature"></span>
+                    </div>
+                    <div class="weather-info">
+                        <label>Humidity</label>
+                        <span class="current_weather_humidity"></span>
+                    </div>
+                    <div class="weather-info">
+                        <label>Wind Speed</label>
+                        <span class="current_weather_wind_speed"></span>
+                    </div>
+                    <div class="weather-info">
+                        <label>Weather Description</label>
+                        <span class="current_weather_description"></span>
+                    </div>
+                    <div class="weather-info">
+                        <label>Weather Icon</label>
+                        <img class="current_weather_icon" src="" alt="Weather icon">
+                    </div>
+                </div>
+            </div>
+
+            <div class="charts">
+                <div class="chart-container">
+                    <canvas id="chart1"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="chart2"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="chart3"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="loading-spinner"></div>
+</body>
+</html>
